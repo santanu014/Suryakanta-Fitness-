@@ -1,12 +1,12 @@
-function showPage(pageId){
+function showPage(id){
 
   let pages = document.querySelectorAll(".page");
 
-  pages.forEach(p => {
+  pages.forEach(p=>{
     p.classList.remove("active");
   });
 
-  document.getElementById(pageId).classList.add("active");
+  document.getElementById(id).classList.add("active");
 
   window.scrollTo(0,0);
 }
