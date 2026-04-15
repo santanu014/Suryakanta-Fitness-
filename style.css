@@ -1,8 +1,8 @@
 body{
   margin:0;
   font-family:Arial;
-  background:#050505;
-  color:white;
+  background:#121212;   /* soft black */
+  color:#ffffff;        /* PURE WHITE TEXT */
 }
 
 /* HEADER */
@@ -10,17 +10,15 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 25px;
-  background:rgba(0,0,0,0.8);
-  position:sticky;
-  top:0;
-  z-index:1000;
+  padding:18px 25px;
+  background:#1a1a1a;
 }
 
 .logo{
   color:#ff2e2e;
-  font-size:22px;
+  font-size:24px;
   font-weight:bold;
+  letter-spacing:1px;
 }
 
 .owner{
@@ -30,33 +28,49 @@ header{
 }
 
 .owner img{
-  width:50px;
-  height:50px;
+  width:55px;
+  height:55px;
   border-radius:50%;
-  border:2px solid red;
+  border:2px solid #ff2e2e;
 }
 
-/* PAGE */
-.page{display:none; padding:20px;}
-.active{display:block;}
+/* PAGES */
+.page{
+  display:none;
+  padding:25px;
+}
+
+.active{
+  display:block;
+}
 
 /* HERO */
 .hero{
   text-align:center;
   padding:90px 20px;
-  background:linear-gradient(rgba(0,0,0,0.8),rgba(20,0,0,0.9)),
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
   url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48') center/cover;
   border-radius:15px;
 }
 
+.hero h1{
+  font-size:42px;
+}
+
+.hero p{
+  font-size:18px;
+  opacity:0.9;
+}
+
 /* BUTTONS */
 button{
-  padding:12px 20px;
+  padding:14px 22px;
   margin:10px;
   background:#ff2e2e;
   color:white;
   border:none;
   border-radius:8px;
+  font-size:16px;
   font-weight:bold;
   cursor:pointer;
 }
@@ -65,11 +79,10 @@ button:hover{
   transform:scale(1.05);
 }
 
-/* WHATSAPP */
 .whatsapp{
   display:inline-block;
   margin-top:15px;
-  padding:12px 18px;
+  padding:14px 20px;
   background:#25D366;
   color:white;
   text-decoration:none;
@@ -77,42 +90,28 @@ button:hover{
   font-weight:bold;
 }
 
-/* GALLERY */
-.gallery{
-  text-align:center;
-  margin-top:30px;
-}
-
-.gallery img{
-  width:200px;
-  height:140px;
-  object-fit:cover;
-  margin:5px;
-  border-radius:10px;
-  transition:0.3s;
-}
-
-.gallery img:hover{
-  transform:scale(1.1);
-}
-
 /* ABOUT */
 .about{
   margin-top:30px;
   padding:20px;
-  background:rgba(255,255,255,0.05);
+  background:#1e1e1e;
   border-radius:12px;
-  line-height:1.6;
+  line-height:1.7;
+}
+
+.about h2{
+  color:#ff2e2e;
 }
 
 /* CARDS */
 .card{
-  background:#111;
-  margin:10px auto;
-  padding:20px;
-  width:80%;
+  background:#1a1a1a;
+  margin:12px auto;
+  padding:25px;
+  width:85%;
   text-align:center;
   border-radius:12px;
+  font-size:18px;
 }
 
 /* GRID */
@@ -124,9 +123,9 @@ button:hover{
 }
 
 .item{
-  background:#111;
-  padding:10px;
-  width:200px;
+  background:#1a1a1a;
+  padding:12px;
+  width:220px;
   border-radius:12px;
   text-align:center;
 }
@@ -139,7 +138,8 @@ button:hover{
 /* FOOTER */
 footer{
   text-align:center;
-  padding:20px;
-  background:#111;
+  padding:25px;
+  background:#1a1a1a;
   margin-top:30px;
+  font-size:16px;
 }
