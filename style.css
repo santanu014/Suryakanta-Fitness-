@@ -1,8 +1,10 @@
 body{
   margin:0;
-  font-family:Arial;
-  background:#121212;   /* soft black */
-  color:#ffffff;        /* PURE WHITE TEXT */
+  font-family:'Arial';
+  color:white;
+
+  /* NEW MODERN GRADIENT BACKGROUND */
+  background:linear-gradient(135deg,#0f0f0f,#1a0033,#000);
 }
 
 /* HEADER */
@@ -10,15 +12,16 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 25px;
-  background:#1a1a1a;
+  padding:18px;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(10px);
 }
 
 .logo{
-  color:#ff2e2e;
+  color:#00ffcc;
   font-size:24px;
   font-weight:bold;
-  letter-spacing:1px;
+  letter-spacing:2px;
 }
 
 .owner{
@@ -31,13 +34,13 @@ header{
   width:55px;
   height:55px;
   border-radius:50%;
-  border:2px solid #ff2e2e;
+  border:2px solid #00ffcc;
 }
 
-/* PAGES */
+/* PAGE */
 .page{
   display:none;
-  padding:25px;
+  padding:20px;
 }
 
 .active{
@@ -48,13 +51,17 @@ header{
 .hero{
   text-align:center;
   padding:90px 20px;
+  border-radius:15px;
+
   background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
   url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48') center/cover;
-  border-radius:15px;
+
+  animation:fadeIn 1.2s ease-in-out;
 }
 
 .hero h1{
-  font-size:42px;
+  font-size:44px;
+  color:#00ffcc;
 }
 
 .hero p{
@@ -66,19 +73,20 @@ header{
 button{
   padding:14px 22px;
   margin:10px;
-  background:#ff2e2e;
-  color:white;
+  background:linear-gradient(45deg,#ff00cc,#00ffcc);
   border:none;
-  border-radius:8px;
-  font-size:16px;
+  border-radius:10px;
+  color:white;
   font-weight:bold;
   cursor:pointer;
+  transition:0.3s;
 }
 
 button:hover{
-  transform:scale(1.05);
+  transform:scale(1.1);
 }
 
+/* WHATSAPP */
 .whatsapp{
   display:inline-block;
   margin-top:15px;
@@ -86,7 +94,7 @@ button:hover{
   background:#25D366;
   color:white;
   text-decoration:none;
-  border-radius:8px;
+  border-radius:10px;
   font-weight:bold;
 }
 
@@ -94,24 +102,14 @@ button:hover{
 .about{
   margin-top:30px;
   padding:20px;
-  background:#1e1e1e;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(0,255,204,0.3);
   border-radius:12px;
   line-height:1.7;
 }
 
 .about h2{
-  color:#ff2e2e;
-}
-
-/* CARDS */
-.card{
-  background:#1a1a1a;
-  margin:12px auto;
-  padding:25px;
-  width:85%;
-  text-align:center;
-  border-radius:12px;
-  font-size:18px;
+  color:#00ffcc;
 }
 
 /* GRID */
@@ -120,26 +118,34 @@ button:hover{
   flex-wrap:wrap;
   justify-content:center;
   gap:15px;
+  margin-top:20px;
 }
 
-.item{
-  background:#1a1a1a;
-  padding:12px;
+.grid img{
   width:220px;
+  height:150px;
+  object-fit:cover;
   border-radius:12px;
-  text-align:center;
+  transition:0.3s;
 }
 
-.item img{
-  width:100%;
-  border-radius:10px;
+.grid img:hover{
+  transform:scale(1.08);
 }
 
-/* FOOTER */
-footer{
+/* CARDS */
+.card{
+  background:rgba(255,255,255,0.05);
+  margin:10px auto;
+  padding:20px;
+  width:80%;
   text-align:center;
-  padding:25px;
-  background:#1a1a1a;
-  margin-top:30px;
-  font-size:16px;
+  border-radius:12px;
+  border:1px solid rgba(0,255,204,0.2);
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
 }
