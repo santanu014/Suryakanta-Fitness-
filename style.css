@@ -1,0 +1,136 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0b0b0b;
+  color:white;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px;
+  background:#111;
+  position:sticky;
+  top:0;
+}
+
+.logo{
+  color:#ff2e2e;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.owner{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.owner img{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  border:2px solid red;
+}
+
+/* PAGE */
+.page{display:none; padding:20px;}
+.active{display:block;}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:60px 20px;
+  animation:fadeIn 1s ease-in;
+}
+
+.hero h1{
+  font-size:32px;
+}
+
+.btns button{
+  padding:10px 15px;
+  margin:10px;
+  border:none;
+  background:red;
+  color:white;
+  cursor:pointer;
+  border-radius:5px;
+  transition:0.3s;
+}
+
+.btns button:hover{
+  transform:scale(1.05);
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 15px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  border-radius:5px;
+}
+
+/* REVIEWS */
+.ratings{
+  text-align:center;
+  padding:20px;
+}
+
+.review{
+  background:#1a1a1a;
+  margin:10px auto;
+  padding:10px;
+  width:80%;
+  border-radius:8px;
+}
+
+/* CARDS */
+.card{
+  background:#1a1a1a;
+  margin:10px auto;
+  padding:15px;
+  width:80%;
+  border-radius:10px;
+  text-align:center;
+}
+
+/* GRID */
+.grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+}
+
+.item{
+  background:#1a1a1a;
+  padding:10px;
+  width:200px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.item img{
+  width:100%;
+  border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  background:#111;
+  padding:20px;
+  margin-top:20px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
