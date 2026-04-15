@@ -8,5 +8,5 @@ function showPage(id){
 
   document.getElementById(id).classList.add("active");
 
-  window.scrollTo(0,0);
+  window.scrollTo({top:0, behavior:"smooth"});
 }
